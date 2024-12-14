@@ -18,8 +18,8 @@ build-backend = "poetry.core.masonry.api"
 [tool.pytest.ini_options]
 minversion = "6.0"
 testpaths = [
-    "*/tests/*.py",
-    "conftest/*",
+    "tests",
+    "conftest",
 ]
 markers = [
     "slow: marks tests as slow (deselect with '-m \"not slow\"')",
@@ -35,5 +35,6 @@ addopts = [
 
 [tool.coverage.run]
 omit = [
-    "*/tests/*.py"
+    "*/tests/*.py",
+    "conftest/*"
 ]
